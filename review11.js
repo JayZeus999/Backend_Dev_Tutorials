@@ -3,12 +3,21 @@ class Square {
     constructor (length) {
         this.#length = length;
     };
+
     getPerimeter() {
         let perimeter = 4 * this.#length;
         return perimeter;
-    }
+    };
+
+    setLength(newLength) {
+        this.#length = newLength;
+    };
 }
 
-let squareOne = new Square(4);
-squareOne.length = 5;
-console.log(squareOne.getPerimeter());
+let squareOne = new Square(15);
+
+console.log(squareOne.getPerimeter()); 
+
+squareOne.setLength(5);
+
+console.log(squareOne.getPerimeter()); 
