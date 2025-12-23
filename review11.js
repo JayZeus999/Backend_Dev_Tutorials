@@ -12,12 +12,22 @@ class Square {
     setLength(newLength) {
         this.#length = newLength;
     };
+
+    #privateLength() {
+        console.log("This is a private method.")
+    };
+
+    revealPrivateLength() {
+        this.#privateLength();
+    };
 }
 
-let squareOne = new Square(15);
+let squareOne = new Square();
 
-console.log(squareOne.getPerimeter()); 
+console.log(squareOne.getPerimeter()); // NaN
 
-squareOne.setLength(5);
+squareOne.setLength(5); // Setters ensure the user cannot just access any variable/method anyhow.
 
-console.log(squareOne.getPerimeter()); 
+squareOne.revealPrivateLength();
+
+console.log(squareOne.getPerimeter()); // Different value for perimeter. 
