@@ -1,8 +1,8 @@
 class Square {
     #length ;  // # sign makes properties private;
     constructor (length) {
-        this.#length = length;
-    };
+        this.#length = length; 
+    }; // we can change the properties in a constructor too if its contents aren't private.
 
     getPerimeter() {
         let perimeter = 4 * this.#length;
@@ -18,7 +18,7 @@ class Square {
     };
 
     revealPrivateLength() {
-        this.#privateLength();
+        return this.#privateLength();
     };
 }
 
