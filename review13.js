@@ -4,7 +4,7 @@ class BankAccount {
         this.accountType = accountType;
         this.balance = balance;
     };
-
+ 
     getAccountBalance() {
         console.log(this.balance);
     };
