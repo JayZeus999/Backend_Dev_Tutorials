@@ -10,8 +10,8 @@
  },
  
  student3 = {
-    name: "Reed",
-    regNo: "002"
+    name: "Tony",
+    regNo: "003"
  };
 
  let studentMap = new Map();
@@ -21,8 +21,14 @@
  studentMap.set(student2, "mathematical biology");
  studentMap.set(student3, "engineering physics");
 
-console.log(studentMap.size);
-console.log(studentMap.get(student1));
-studentMap.delete(student3);
+// console.log(studentMap.size);
+// console.log(studentMap.get(student1));
+// studentMap.delete(student3);
 
-console.log(studentMap.has(student3));
+// console.log(studentMap.has(student3));
+
+// Map forEach function : (value, key)
+studentMap.forEach((department, student) => {
+    console.log(`My name is ${student.name} with 
+        reg No. ${student.regNo}. My department is ${department}`);
+});

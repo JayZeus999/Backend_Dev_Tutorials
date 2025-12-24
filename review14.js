@@ -22,4 +22,4 @@ for ([key, value] of alphabets.entries()) {
     console.log("Key", key);
     console.log("Value", value);
     console.log(key === value);
-}  
+};  
