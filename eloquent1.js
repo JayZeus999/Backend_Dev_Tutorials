@@ -5,6 +5,7 @@ function hashtags () {
         console.log(sevenTags);
     }
     
+    // cascade down the triangle
     let arr = sevenTags.split("")
     for (let i = 7; i > 0; i--){
         arr.pop();
@@ -14,8 +15,3 @@ function hashtags () {
 }
 
 hashtags();
-
-// let x = "xxx"
-// let y = x.split("")
-// console.log(typeof(x))
-// console.log(typeof(y))
