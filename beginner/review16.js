@@ -27,3 +27,20 @@ let moreRivers = ["Danube", "Amazon"];
 
 rivers.push(...moreRivers); // we can also use .concat() as well
 console.log(rivers);
+
+// Create a new array with spread.
+let numbers = [1, 2];
+let moreNumbers = [3, 4];
+let allNumbers = [...numbers, ...moreNumbers];
+console.log(allNumbers);  
+
+// You can copy arrays with spread.
+let val = [8, 9, 10];
+let copyVal = [...val];
+
+console.log(val);
+console.log(copyVal);
+
+// You can spread strings.
+let greeting = "hello";
+console.log([...greeting]);
