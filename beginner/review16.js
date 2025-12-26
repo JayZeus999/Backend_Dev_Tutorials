@@ -20,3 +20,10 @@ let aboutMe2 = {
 
 let {named, aged} = aboutMe2.details;
 console.log(named);
+
+// Spread operator.
+let rivers = ["Nile", "Ganges", "Yangte"];
+let moreRivers = ["Danube", "Amazon"];
+
+rivers.push(...moreRivers); // we can also use .concat() as well
+console.log(rivers);
