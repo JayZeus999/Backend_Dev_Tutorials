@@ -77,7 +77,7 @@ console.log(
 let names = ["Jay", "John", "Dave", "AY", "JT"];
 
 console.log(
-    names.map(function(obj, index)) {
-        return `My name is ${obj} and my ID is ${index}`;
-    })
+   names.map(function(obj, index) {
+      return `My name is ${obj} and my ID is ${index}`;
+   })
 );
