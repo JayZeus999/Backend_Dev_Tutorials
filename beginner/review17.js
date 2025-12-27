@@ -7,4 +7,13 @@ function sum(...args) {
     return total;
 }
 
-console.log(sum(1, 2, 3));
+// console.log(args); // where args is an array.
+console.log(sum(1, 2, 3)); // Rest parameter has to be the last argument(s).
+
+
+// Regular Expressions.
+console.log(/hello/i.test("Hello people")); 
+// OR
+let re = /dogs/i;
+let result = "Dogs are so cute and cuddly!";
+console.log(re.test(result));
