@@ -27,7 +27,7 @@ console.log(result2);
 
 // Regular expression character classes. Break down everything & list the quirks.
 var st = /w[aeo]rd[s-z]/g;
-var st2 = /l[^A-I]st[^e-w0-9]/;
+var st2 = /l[^A-I]st[^e-w0-9]/; 
 var statement = "He was lost for words, wards and weird werds.. weird wordz."
 
 console.log(statement.match(st)); 
