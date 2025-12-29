@@ -21,7 +21,7 @@ let result = "Dogs are so cute and cuddly!";
 console.log(re.test(result));
 
 // RegExs with global flag. Why do we need the gf?
-let result2 = result.match(/cute/ig); 
+let result2 = result.match(/cut/ig); 
 console.log(result2);
 
 
