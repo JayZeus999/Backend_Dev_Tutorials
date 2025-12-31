@@ -1,3 +1,7 @@
+function l(arg) {
+    console.log(arg)
+}
+
 const p1 = new Promise((resolve, reject) => {
     setTimeout(() => {
         console.log("The 1st promise has been fulfilled.");
@@ -26,5 +30,5 @@ Promise.all([p1,p2,p3]).then((results) => {
     }, 1000);
 })
     .catch((error) => {
-        console.log(`Error: ${error}`);
+        l(`Error: ${error}`);
     });
