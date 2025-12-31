@@ -34,4 +34,22 @@ setTimeout(function() {
     function(reason) {
         console.log("That's why we couldn't get the coffee.", reason);
     }
- )
+ );
+
+// .catch() gives a ??
+ let sendMeMoney = new Promise(function(resolve, reject) {
+    let gotSomeMoney = true;
+    if (gotSomeMoney) {
+        resolve("I got that mula"); 
+    } else {
+        reject("Omo, mo broke gan!");
+    }
+ }) 
+
+ sendMeMoney.then(
+    function (value) {
+        console.log(value);
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
