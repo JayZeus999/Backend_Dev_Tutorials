@@ -5,14 +5,18 @@ function l(arg) {
 async function letMeWait() {
     let thePromise = new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log("The 1st promise has been resolved.");
-            resolve(10);
+            // console.log("The 1st promise has been resolved.");
+            reject("I'm a Judas, so i broke the promise like Brutus, rhymes lol.");
         }, 2 * 1000);
     })
     
-    let promiseResult = await thePromise;
-
-    return promiseResult;
+    try {
+        let promiseResult = await thePromise;
+        return promiseResult;
+    }
+    catch(reason) {
+        l(`Reason: ${reason}`)
+    }
 }
 
 l(letMeWait()); 
