@@ -1,7 +1,8 @@
 function l(arg) {
-    console.log(arg)
+    console.log(arg);
 }
 
+// Promise.all()
 const p1 = new Promise((resolve, reject) => {
     setTimeout(() => {
         console.log("The 1st promise has been fulfilled.");
@@ -25,6 +26,15 @@ const p3 = new Promise((resolve, reject) => {
 
 
 Promise.all([p1,p2,p3]).then((results) => {
+    setTimeout(() => {
+        console.log(`Results:${results}`);
+    }, 1000);
+})
+    .catch((error) => {
+        l(`Error: ${error}`);
+    });
+
+Promise.race([p1,p2,p3]).then((results) => {
     setTimeout(() => {
         console.log(`Results:${results}`);
     }, 1000);
