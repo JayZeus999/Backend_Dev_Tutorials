@@ -37,8 +37,8 @@ setTimeout(function() {
  );
 
 // .catch() gives a ??
- let sendMeMoney = new Promise(function(resolve, reject) {
-    let gotSomeMoney = true;
+ let sendMeMoney = new Promise((resolve, reject) => {
+    let gotSomeMoney = !!true;
     if (gotSomeMoney) {
         resolve("I got that mula"); 
     } else {
@@ -48,8 +48,8 @@ setTimeout(function() {
 
  sendMeMoney.then(
     function (value) {
-        console.log(value);
+        console.log(`What's good?, ${value}`);
     })
-    .catch(function (error) {
-        console.log(error);
-    })
+    .catch(error => {
+        console.log("Error",error);
+    });
