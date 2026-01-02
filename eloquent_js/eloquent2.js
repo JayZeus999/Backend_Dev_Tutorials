@@ -17,3 +17,11 @@ function fizzBuzz () {
 }
 
 fizzBuzz();
+
+let num;
+function minimum(a, b) {
+    num = Math.min(a, b);
+    console.log(num);
+}
+
+minimum(10, 0.002)
