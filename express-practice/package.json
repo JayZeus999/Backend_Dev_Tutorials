@@ -4,11 +4,15 @@
   "description": "starter project for express",
   "main": "server.js",
   "scripts": {
+    "start": "node server"
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "express"
   ],
   "author": "Joseph",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }

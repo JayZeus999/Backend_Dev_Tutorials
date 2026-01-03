@@ -1,4 +1,4 @@
-function hashtags () {
+hashtags = () => {
     let sevenTags = [];
     for (let i = 0; i < 7; i++) {
         sevenTags += "#";

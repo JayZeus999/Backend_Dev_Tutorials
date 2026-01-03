@@ -18,6 +18,7 @@ function fizzBuzz () {
 
 fizzBuzz();
 
+// Minumum function.
 let num;
 function minimum(a, b) {
     num = Math.min(a, b);
