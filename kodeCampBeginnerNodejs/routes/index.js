@@ -10,8 +10,6 @@ const { index,
 /* GET home page. */
 router.get('/', index); 
 
-module.exports = router;
-
 router.post("/", handlePost);
 
 router.put("/", handlePut);
@@ -19,3 +17,5 @@ router.put("/", handlePut);
 router.patch("/", handlePatch);
 
 router.delete("/", handleDelete);
+
+module.exports = router;
