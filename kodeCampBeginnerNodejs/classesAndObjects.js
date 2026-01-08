@@ -1,19 +1,21 @@
 class Car {
-    constructor(color, numberOfTyres = 4, steering = 1) {
-        this.color = color;
-        this.numberOfTyres = numberOfTyres;
-        this.steering = steering;
-    }
+    // constructor(color, numberOfTyres = 4, steering = 1) {
+    //     this.color = color;
+    //     this.numberOfTyres = numberOfTyres;
+    //     this.steering = steering;
+    // }
 
+    #balance = 400
     getCarProperty () {
         return {
             color: this.color,
             numberOfTyres: this.numberOfTyres,
-            steering: this.steering
+            steering: this.steering,
+            balance: this.#balance
         };
-    }
+    };
 }
-
+ 
 
 class Ferrari extends Car {
     constructor(canDrift) {
@@ -22,7 +24,7 @@ class Ferrari extends Car {
     }
 }
 
-let brandNewWhip = new Ferrari();
-brandNewWhip.color = "red";
-brandNewWhip.canDrift = true;
+let brandNewWhip = new Ferrari(true);
+// brandNewWhip.color = "red";
+// brandNewWhip.canDrift = true;
 console.log(brandNewWhip.getCarProperty());

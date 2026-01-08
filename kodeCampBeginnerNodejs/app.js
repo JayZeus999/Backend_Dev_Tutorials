@@ -8,7 +8,33 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const { default: mongoose } = require('mongoose');
 
-var app = express();
+var app = express(); 
+
+let todo = [];
+
+app.get("/", (req, res) => {
+  console.log("Hello");
+}, (res, req) => {
+  res.send(todo);
+})
+
+app.post("/todo", (req, res) => {
+  const id = Math.floor(Math.random() * 10000);
+  const title = req.body.title;
+  const description = req.body.description;
+
+  todo.push({
+    id,
+    title,
+    description,
+    isDone: false
+  });
+
+  res.status(201).send({
+    message: "Todo added successfully",
+    todo
+  })
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
