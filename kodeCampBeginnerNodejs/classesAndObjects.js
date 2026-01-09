@@ -21,10 +21,12 @@ class Ferrari extends Car {
     constructor(canDrift) {
         super();
         this.canDrift = canDrift;
+        this.rooftopExists = true;
     }
 }
 
 let brandNewWhip = new Ferrari(true);
-// brandNewWhip.color = "red";
-// brandNewWhip.canDrift = true;
-console.log(brandNewWhip.getCarProperty());
+brandNewWhip.color = "red";
+brandNewWhip.steering = true;
+brandNewWhip.canDrift = true;
+console.log(brandNewWhip);
